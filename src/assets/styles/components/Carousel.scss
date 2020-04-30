@@ -1,0 +1,22 @@
+body{
+    overflow-x: hidden;
+}
+
+.carousel{
+    overflow-x: scroll;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+}
+
+.carousel__container{
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    font-size: 0;
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+}
+
+
