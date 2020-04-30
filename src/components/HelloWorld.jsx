@@ -1,10 +1,10 @@
-import React from 'react'
-import '../assets/styles/App.scss'
+import React from 'react';
+import '../assets/styles/App.scss';
 
 const HelloWorld = () => {
-    return(
-        <h1>Hello world</h1>
-    )
-}
+  return (
+    <h1>Hello world</h1>
+  );
+};
 
-export default HelloWorld
+export default HelloWorld;
