@@ -1,7 +1,10 @@
+@import "./Vars.scss";
+@import "./components/Media.scss";
+
 body{
     margin: 0;
-    background-color: #e6af2e;
-    font-family: 'Muli', sans-serif;
+    background-color: $main-color;
+    font-family: $theme-font;
 }
 
 *{
