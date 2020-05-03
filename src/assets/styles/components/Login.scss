@@ -75,6 +75,17 @@
   text-decoration: underline;
 }
 
+.login__container--sesion a {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  text-decoration: none;
+}
+
+.login__container--sesion a:hover {
+  text-decoration: underline;
+}
+
 .login__input {
   background-color: transparent;
   border-bottom: 2px solid white;
