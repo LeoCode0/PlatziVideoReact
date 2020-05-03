@@ -1,0 +1,23 @@
+
+.container{
+    background: linear-gradient(#70c1b3, #247ba0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container__error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+    min-height: 512px;
+}
+
+.container__error h1{
+    margin-bottom: 0;
+}
