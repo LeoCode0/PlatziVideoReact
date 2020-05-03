@@ -3,6 +3,7 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import googleIcon from '../assets/static/play.png';
 import twitterIcon from '../assets/static/twitter.png';
 
@@ -36,9 +37,9 @@ const Login = () => (
       </div>
       <p className='login__container--register'>
         No tienes ninguna cuenta 
-        <a href='/'>
+        <Link to='/register'>
           Registrate
-        </a>
+        </Link>
       </p>
     </section>
   </section>
