@@ -16,7 +16,7 @@ const Home = ({ myList, trends, originals }) => {
           <Categories title='Mi lista'>
             <Carousel>
               {
-                initialState.mylist.map((item) => <CarouselItem key={item.id} {...item} />)
+                myList.map((item) => <CarouselItem key={item.id} {...item} />)
               }
             </Carousel>
           </Categories>
@@ -43,7 +43,7 @@ const Home = ({ myList, trends, originals }) => {
 
 const mapStateToProps = (state) => {
   return {
-    myList: state.mylist,
+    myList: state.myList,
     trends: state.trends,
     originals: state.originals,
   };
