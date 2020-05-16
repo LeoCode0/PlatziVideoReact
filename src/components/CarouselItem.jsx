@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import '../assets/styles/components/CarouselItems.scss';
 import play from '../assets/static/play.png';
 import add from '../assets/static/mas.png';
+import remove from '../assets/static/remove-icon.png';
 
-import { setFavorite } from '../actions/index';
+import { setFavorite, deleteFavorite } from '../actions/index';
 
 const CarouselItem = (props) => {
   const { id, cover, title, year, contentRating, duration } = props;
@@ -16,6 +17,10 @@ const CarouselItem = (props) => {
         id, cover, title, year, contentRating, duration,
       },
     );
+  };
+
+  const handleDeleteFavorite = (itemId) => {
+    props.deleteFavorite(itemId);
   };
 
   return (
@@ -29,6 +34,12 @@ const CarouselItem = (props) => {
             src={add}
             alt='añadir'
             onClick={handleSetFavorite}
+          />
+          <img
+            src={remove}
+            alt='remove'
+            className='imagenes'
+            onClick={() => handleDeleteFavorite(id)}
           />
         </div>
         <h3 className='carousel-item__details--title'>
@@ -52,6 +63,7 @@ CarouselItem.propTypes = {
 
 const mapDispatchToProps = {
   setFavorite,
+  deleteFavorite,
 };
 
 export default connect(null, mapDispatchToProps)(CarouselItem);
