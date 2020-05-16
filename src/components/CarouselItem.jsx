@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-wrap-multilines */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -9,7 +10,7 @@ import remove from '../assets/static/remove-icon.png';
 import { setFavorite, deleteFavorite } from '../actions/index';
 
 const CarouselItem = (props) => {
-  const { id, cover, title, year, contentRating, duration } = props;
+  const { id, cover, title, year, contentRating, duration, isList } = props;
 
   const handleSetFavorite = () => {
     props.setFavorite(
@@ -29,18 +30,21 @@ const CarouselItem = (props) => {
       <div className='carousel-item__details'>
         <div>
           <img className='imagenes' src={play} alt='play' />
-          <img
-            className='imagenes'
-            src={add}
-            alt='añadir'
-            onClick={handleSetFavorite}
-          />
-          <img
-            src={remove}
-            alt='remove'
-            className='imagenes'
-            onClick={() => handleDeleteFavorite(id)}
-          />
+          {
+            isList ?
+              <img
+                src={remove}
+                alt='remove'
+                className='imagenes'
+                onClick={() => handleDeleteFavorite(id)}
+              /> :
+              <img
+                className='imagenes'
+                src={add}
+                alt='añadir'
+                onClick={handleSetFavorite}
+              />
+          }
         </div>
         <h3 className='carousel-item__details--title'>
           {title}
